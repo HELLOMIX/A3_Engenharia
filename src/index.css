@@ -11,28 +11,83 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+/* Global Styles */
+/* Reset some default styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: #1a1a1a;
+  max-width: 100%;
+}
+
+.header__link:hover {
+  text-decoration: none;
+}
+
+.header h1 {
+  font-size: 1.2em;
+  background-color: #646cff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.header img {
+  width: 100px;
+  height: 100px;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Styles */
+.login-container a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
-a:hover {
+.login-container a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -46,11 +101,12 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+.login-container :hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
+
+.login-container :focus,
+.login-container :focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -65,4 +121,50 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Login Container Styles */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+.login-container h2 {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.login-container button {
+  width: 100%;
+  background-color: #646cff;
+  color: white;
+  border: none;
+}
+
+.login-container button:hover {
+  background-color: #535bf2;
 }

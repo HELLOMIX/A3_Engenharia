@@ -1,28 +1,22 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from './components/Header';
+import Login from './pages/Login';
+import CadastroEmpresa from './pages/CadastroEmpresa';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div class="login-container">
-        <form class="login-form" action="/login" method="POST">
-            <h2>Login</h2>
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required></input>
-            </div>
-            <div class="input-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required></input>
-            </div>
-            <button type="submit">Entrar</button>
-            <p class="forgot-password"><a href="#">Esqueceu a senha?</a></p>
-        </form>
-    </div>
-    </>
-  )
-}
+    <BrowserRouter>
+      {/* Cabeçalho do site */}
+      <Header />
 
-export default App
+      {/* Rota para as páginas do site */}
+      <Routes>
+        <Route path="/" element={<Login />}/>
+        <Route path="/cadastro-empresa" element={<CadastroEmpresa />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;
