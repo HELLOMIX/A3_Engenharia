@@ -1,8 +1,8 @@
 import React from 'react'
-import Formulario from '../components/Formulario';
+import Main from '../components/Main';
 
 const CadastroEmpresa = () => {
-  return <Formulario />
+  return <Main type="cadastroEmpresa"/>
 };
 
 export default CadastroEmpresa

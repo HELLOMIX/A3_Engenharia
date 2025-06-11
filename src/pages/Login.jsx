@@ -2,7 +2,7 @@ import React from "react";
 import Main from "../components/Main";
 
 const Login = () => {
-    return <Main />;
+    return <Main type="login"/>;
 };
 
 export default Login;
