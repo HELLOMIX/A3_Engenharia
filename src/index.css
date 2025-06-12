@@ -168,3 +168,110 @@ button {
 .login-container button:hover {
   background-color: #535bf2;
 }
+
+/* Cadastro Empresa Styles */
+
+.cadastro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .cadastro-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+.cadastro-container h2 {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.cadastro-container input {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.cadastro-container button {
+  width: 100%;
+  background-color: #646cff;
+  color: white;
+  border: none;
+}
+
+.cadastro-container button:hover {
+  background-color: #535bf2;
+}
+
+/* Cadastro Vaga Styles */
+
+.cadastroVaga-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .cadastroVaga-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+.cadastroVaga-container h2 {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.cadastroVaga-container .descricao-vaga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.cadastroVaga-container textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  resize: vertical;
+}
+
+.cadastroVaga-container input,
+.cadastroVaga-container select {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+.cadastroVaga-container button {
+  width: 100%;
+  background-color: #646cff;
+  color: white;
+  border: none;
+}
+.cadastroVaga-container button:hover {
+  background-color: #535bf2;
+}
