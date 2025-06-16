@@ -4,6 +4,7 @@ import CadastroEmpresa from "./CadastroEmpresa";
 import CadastroVaga from "./CadastroVaga";
 import VagaList from "./VagaList";
 import repositoryVagas from "../../api/api.js";
+import Home from "./Home";
 
 const Main = ({ type }) => {
     const [vagaData, setVagaData] = useState([]);
@@ -18,10 +19,17 @@ const Main = ({ type }) => {
 
     return (
         <div className="main-container">
-            {type === "login" && <Login />}
-            {type === "cadastroEmpresa" && <CadastroEmpresa />}
-            {type === "cadastroVaga" && <CadastroVaga />}
-            {type === "vagas" && (
+            <div className="main-container__login">
+                {type === "login" && <Login />}
+            </div>
+            <div className="main-container__cadastro">
+                {type === "cadastroEmpresa" && <CadastroEmpresa />}
+            </div>
+            <div className="main-container__cadastro-vaga">
+                {type === "cadastroVaga" && <CadastroVaga />}
+            </div>
+            {/*<div className="main-container__vaga-list">
+                {type === "vagas" && (
                 <VagaList
                     title="Lista de Vagas"
                     items={vagaData.length}
@@ -29,6 +37,10 @@ const Main = ({ type }) => {
                     idPath="/vaga"
                 />
             )}
+            </div>*/}
+            <div className="main-container__home">
+                {type === "home" && <Home />}
+            </div>
         </div>
     );
 };
