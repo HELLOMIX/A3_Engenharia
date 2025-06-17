@@ -7,6 +7,7 @@ import CadastroVaga from './pages/CadastroVaga';
 import ListaVagas from './components/SingleVaga';
 import Vaga from './pages/Vaga';
 import Home from './pages/Home';
+import Curriculo from './pages/Curriculo';
 
 const App = () => {
   return (
@@ -16,10 +17,11 @@ const App = () => {
 
       {/* Rota para as páginas do site */}
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/cadastro-empresa" element={<CadastroEmpresa />} />
         <Route path='/cadastro-vaga' element={<CadastroVaga />} />
-        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/curriculo' element={<Curriculo />}></Route>
         {/*<Route path='/' element={<ListaVagas />} />*/}
         {/*<Route path='/vaga/:id' element={<Vaga />} />*/}
       </Routes>

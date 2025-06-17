@@ -148,7 +148,6 @@ button {
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 10%;
 }
 
 .login-container {
@@ -159,6 +158,10 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-left: 20%;
+}
+
+.login-page {
+  margin-top: 10%;
 }
 
 @media (max-width: 600px) {
@@ -224,6 +227,7 @@ button {
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  margin-top: 10%;
 }
 
 .main-container__cadastro {
@@ -309,6 +313,7 @@ button {
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  margin-top: 10%;
 }
 
 .cadastro-vaga-text {
@@ -406,11 +411,171 @@ button {
   background-color: #535bf2;
 }
 
-/* VagasList Styles */
+/* Home Styles */
+.home-container {
+  background-color: #f7f7f7;
+  color: #1a1a1a;
+  max-width: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 
-.vagas-container {
-    max-width: 1200px;
-    width: 100%;
+.home-container .coluna1 {
+  width: 10%;
+  margin-right: 1px solid #1a1a1a;
+  box-shadow: #1a1a1a 0px 0px 10px;
+  background-color: #f0f0f0;
+}
+
+.home-container ul {
+  width: 100%;
+}
+
+.home-container li {
+  list-style: none;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+}
+
+.home-container li:hover {
+  background-color: #7f1bad;
+}
+
+.home-container li:hover a {
+  color: #ffffff;
+}
+
+.home-container a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: large;
+}
+
+.home-container .coluna2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.home-container .top-container {
+  background-color: #7f1bad;
+  color: #7f1bad;
+  width: 100%;
+  padding-bottom: 2%;
+}
+
+.home-container .linha1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.home-container .info-aluno {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 30px;
+}
+
+.home-container .info-aluno img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.home-container .info-conquista {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 20px 20px 30px;
+}
+
+.home-container .linha2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.home-container .meu-perfil {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 30px;
+  width: 60%;
+}
+
+.home-container .caixa-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home-container .caixa-group h3 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.home-container .caixa-group #aviso {
+  color: #ff3c3c;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: end;
+  width: 100%;
+}
+
+.home-container .caixa-group .caixa1 {
+  background-color: #d8ffda;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 30%;
+}
+
+.home-container .caixa-group .caixa2 {
+  background-color: #d7f0ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 30%;
+}
+
+.home-container .caixa-group .caixa3 {
+  background-color: hsl(0, 100%, 92%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 30%;
+}
+
+.home-container .linha3 {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 30px;
+  width: 60%;
 }
 
 .job-listings {
@@ -421,7 +586,7 @@ button {
 }
 
 .job-card {
-    background-color: #fff;
+    background-color: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -477,7 +642,7 @@ button {
     overflow: hidden; /* Garante que o texto não transborde */
     text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
     display: -webkit-box;
-    /*-webkit-line-clamp: 3;*/ /* Limita a 3 linhas */
+    -webkit-line-clamp: 3; /* Limita a 3 linhas */
     -webkit-box-orient: vertical;
 }
 

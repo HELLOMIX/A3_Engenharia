@@ -1,10 +1,10 @@
 import React from 'react'
 import Main from '../components/Main'
 
-const Home = () => {
+const Curriculo = () => {
   return (
-  <Main type="home" />
+    <Main type="curriculo" />
   )
 }
 
-export default Home
+export default Curriculo

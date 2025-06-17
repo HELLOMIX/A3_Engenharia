@@ -9,7 +9,7 @@ const Header = () => {
           <img src={logoAnima} alt="" />
         </Link>
         <Link to="/cadastro-empresa" className='header__link'>
-          <h1>Cadastre sua empresa</h1> 
+          <h1>Cadastre sua empresa</h1>
         </Link>
     </div>
   );

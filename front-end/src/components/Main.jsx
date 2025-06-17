@@ -5,6 +5,7 @@ import CadastroVaga from "./CadastroVaga";
 import VagaList from "./VagaList";
 import repositoryVagas from "../../api/api.js";
 import Home from "./Home";
+import Curriculo from "./Curriculo";
 
 const Main = ({ type }) => {
     const [vagaData, setVagaData] = useState([]);
@@ -14,6 +15,10 @@ const Main = ({ type }) => {
             repositoryVagas.getVagas()
                 .then(data => setVagaData(data))
                 .catch(error => console.error("Erro ao buscar vagas:", error));
+        }
+        if (type === "home" && !sessionStorage.getItem("homeReloaded")) {
+            sessionStorage.setItem("homeReloaded", "true");
+            window.location.reload();
         }
     }, [type]);
 
@@ -40,6 +45,9 @@ const Main = ({ type }) => {
             </div>*/}
             <div className="main-container__home">
                 {type === "home" && <Home />}
+            </div>
+            <div className="main-container__curriculo">
+                {type === "curriculo" && <Curriculo />}
             </div>
         </div>
     );
