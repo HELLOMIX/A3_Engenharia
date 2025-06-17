@@ -1,23 +1,12 @@
 import React from 'react'
 import placeholderProfilePicture from '../assets/images/placeholderProfilePicture.png'
-import logoAnima from '../assets/images/logoAnima.png'
-import { Link } from 'react-router-dom';
+import BarraNav from './BarraNav'
 
 const Home = () => {
   return (
     <div className='home-container'>
         <div className='coluna1'>
-            <div className='nav-lateral'>
-                <nav>
-                    <img src={logoAnima} alt="Logo da Anima" />
-                    <ul>
-                        <li><a href="/home">Home</a></li>
-                        <Link to="/curriculo"><li><a>Meu Curriculo</a></li></Link>
-                        <li><a href="/vagas">Vagas</a></li>
-                        <li><a href="/Contrato">Contrato</a></li>
-                    </ul>
-                </nav>
-            </div>
+            {<BarraNav />}
         </div>
         <div className='coluna2'>
             <div className='top-container'>
